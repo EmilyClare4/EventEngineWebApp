@@ -26,7 +26,6 @@ namespace EventEngine.Models
                         Location = "La Cabra, Aarhus City Centre",
                         Cost = 7.99M,
                         IsIndoor = true,
-                        IsOutdoor = false,
                         Capacity = 8
                     },
                     
@@ -37,7 +36,6 @@ namespace EventEngine.Models
                         Location = "Skatehall, Aarhus North",
                         Cost = 0.00M,
                         IsIndoor = true,
-                        IsOutdoor = false,
                         Capacity = 20
                     },
 
@@ -48,7 +46,6 @@ namespace EventEngine.Models
                         Location = "Riiskov Forest",
                         Cost = 0.00M,
                         IsIndoor = false,
-                        IsOutdoor = true,
                         Capacity = 12
                     }
                 );

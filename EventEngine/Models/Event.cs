@@ -14,7 +14,6 @@ namespace EventEngine.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Cost { get; set; }
         public bool IsIndoor { get; set; }
-        public bool IsOutdoor { get; set; }
         public int Capacity { get; set; }
     }
 }

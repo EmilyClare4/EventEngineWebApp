@@ -8,6 +8,12 @@ html {
   }
 }
 
+@font-face {
+    font-family: "F534f29cca3b34705 - subset of Nocturno Display Std Bk";
+    src: url("https://db.onlinewebfonts.com/t/c12a318af9a9786a89a3c2771c0bd905.eot");
+    src: url("https://db.onlinewebfonts.com/t/c12a318af9a9786a89a3c2771c0bd905.eot?#iefix")format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/c12a318af9a9786a89a3c2771c0bd905.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/c12a318af9a9786a89a3c2771c0bd905.woff")format("woff"), url("https://db.onlinewebfonts.com/t/c12a318af9a9786a89a3c2771c0bd905.ttf")format("truetype"), url("https://db.onlinewebfonts.com/t/c12a318af9a9786a89a3c2771c0bd905.svg#F534f29cca3b34705 - subset of Nocturno Display Std Bk")format("svg");
+}
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -18,6 +24,21 @@ html {
 }
 
 body {
+    font-family: "F534f29cca3b34705 - subset of Nocturno Display Std Bk";
     margin-bottom: 60px;
     background-color: #f0ece0;
 }
+
+.my-button {
+    color: #fff; /* Default text color */
+    font-size: 20px; /* Default font size */
+    padding: 10px 20px; /* Default padding */
+    transition: background-color 0.3s, transform 0.3s, font-size 0.3s; /* Transition properties for hover effect */
+}
+
+    /* Button styles for hover state */
+    .my-button:hover {
+        color: #fff; /* New text color on hover */
+        font-size: 24px; /* Larger font size on hover */
+        transform: scale(1.1); /* Scale up the button on hover */
+    }
