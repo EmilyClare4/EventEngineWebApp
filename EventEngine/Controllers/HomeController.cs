@@ -28,11 +28,6 @@ namespace EventEngine.Controllers
             return View();
         }
 
-        public IActionResult Reviews()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

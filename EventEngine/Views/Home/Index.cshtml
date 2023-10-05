@@ -1,64 +1,58 @@
-﻿<section class="Intro container">
+﻿<section class="Intro container py-5">
     <div class="row">
         <div class="col-md-6">
             <h1>Welcome!</h1>
             <p class="lead">
                 This is the place to find inspiration for your next gathering,
-                be it big or small, outdoor or indoor, formal or casual!<br><br>
-                Get ideas from our popular event templates, or find your dream event by using the filters.
+                be it big or small, outdoor or indoor, formal or casual!
             </p>
         </div>
-        <div class="col-md-6">
-
-        </div>
+        <div class="col-md-6"></div>
     </div>
 </section>
 
-<section class="Popular events container-fluid">
+<section class="Popular events container-fluid py-5">
     <div class="row justify-content-between">
         <h1 class="title">Popular Events</h1>
-        <!-- Add justify-content-between class to spread out the cards -->
-        <div class="col-md-4 mb-3">
-            <!-- Adjust column width and add margin bottom for gap -->
-            <div class="card" style="width: 100%;">
+        <div class="col-md-4 mb-4">
+            <div class="card">
                 <img src="~/images/cafe.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Cosy Cafe</h5>
                     <p class="card-text">Small gathering in a new cafe. Grab a cup of coffee and chat.</p>
-                    <a asp-controller="Events" asp-action="Details" asp-route-id="1" class="btn btn-primary">Details</a>
+                    <a asp-controller="Events" asp-action="Details" asp-route-id="1" class="btn my-button">Details</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <!-- Adjust column width and add margin bottom for gap -->
-            <div class="card" style="width: 100%;">
+        <div class="col-md-4 mb-4">
+            <div class="card">
                 <img src="~/images/paint.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paint 'n' Sip</h5>
                     <p class="card-text">For a bigger group. Book out the place and have a blast!</p>
-                    <a asp-controller="Events" asp-action="Details" asp-route-id="5" class="btn btn-primary">Details</a>
+                    <a asp-controller="Events" asp-action="Details" asp-route-id="5" class="btn my-button">Details</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-3">
-            <!-- Adjust column width and add margin bottom for gap -->
-            <div class="card" style="width: 100%;">
+        <div class="col-md-4 mb-4">
+            <div class="card">
                 <img src="~/images/hike.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Hiking</h5>
                     <p class="card-text">Get back to nature with a hike, can be as big or as small as you want.</p>
-                    <a asp-controller="Events" asp-action="Details" asp-route-id="3" class="btn btn-primary">Details</a>
+                    <a asp-controller="Events" asp-action="Details" asp-route-id="3" class="btn my-button">Details</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="Search container-fluid d-flex justify-content-center ">
+<section class="Search container-fluid py-5 d-flex justify-content-center">
     <div class="row">
         <h1 class="title">Search ideas</h1>
         <p class="text-center">None of the above ideas suit you? Find more inspiration here!</p>
-        <a asp-controller="Events" asp-action="Index" class="btn btn-lg btn-primary">Find</a>
-        
+        <div class="text-center">
+            <a asp-controller="Events" asp-action="Index" class="btn big-button">Find</a>
+        </div>
     </div>
 </section>

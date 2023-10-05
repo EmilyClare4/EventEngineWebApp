@@ -30,15 +30,31 @@ body {
 }
 
 .my-button {
-    color: #353148; /* Default text color */
+    background-color: #353148;
+    color: #f0ece0; /* Default text color */
+    font-size: 15px; /* Default font size */
+    padding: 10px 20px; /* Default padding */
+    transition: background-color 0.3s, transform 0.3s, font-size 0.3s; /* Transition properties for hover effect */
+}
+
+/* Button styles for hover state */
+.my-button:hover {
+    color: #BCA37F; /* New text color on hover */
+    font-size: 20px; /* Larger font size on hover */
+    transform: scale(1.1); /* Scale up the button on hover */
+}
+
+.big-button {
+    background-color: #353148;
+    color: #f0ece0; /* Default text color */
     font-size: 40px; /* Default font size */
     padding: 10px 20px; /* Default padding */
     transition: background-color 0.3s, transform 0.3s, font-size 0.3s; /* Transition properties for hover effect */
 }
 
 /* Button styles for hover state */
-    .my-button:hover {
-        color: #BCA37F; /* New text color on hover */
-        font-size: 50px; /* Larger font size on hover */
-        transform: scale(1.1); /* Scale up the button on hover */
-    }
+.big-button:hover {
+    color: #BCA37F; /* New text color on hover */
+    font-size: 50px; /* Larger font size on hover */
+    transform: scale(1.1); /* Scale up the button on hover */
+}
