@@ -1,3 +1,9 @@
+/* _content/EventEngine/Views/Home/Index.cshtml.rz.scp.css */
+.custom-bg[b-lmchc4k1in] {
+    background-color: #f0f0f0; /* Light gray color */
+    padding: 20px; /* Add some padding for spacing */
+}
+
 /* _content/EventEngine/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

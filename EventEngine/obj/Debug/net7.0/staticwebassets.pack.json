@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\party.jpg",
+      "PackagePath": "staticwebassets\\images\\party.jpg"
+    },
+    {
+      "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\table.jpg",
+      "PackagePath": "staticwebassets\\images\\table.jpg"
+    },
+    {
       "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

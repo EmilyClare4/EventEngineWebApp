@@ -1,8 +1,29 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<section class="Intro container">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="lead">
+                Welcome! <br><br> This is the place to find inspiration for your next gathering,
+                be it big or small, outdoor or indoor, formal or casual!<br><br>
+                Get ideas from our popular event templates, or find your dream event by using the filters.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="~/images/party.jpg" alt="Party Image" class="img-fluid" />
+        </div>
+    </div>
+</section>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="Topics container-fluid text-center">
+    <div class="row">
+        <div class="col-md-12 p-0 position-relative">
+            <div class="image-container">
+                <img src="~/images/table.jpg" alt="Table" class="w-100 opacity-75" />
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-area="" asp-controller="Events" asp-action="Index" class="btn position-absolute" style="top: 27%; left: 70%;">Search</a>
+                <a href="#" class="btn position-absolute" style="top: 27%; left: 20%;">About</a>
+                <a href="#" class="btn position-absolute" style="top: 60%; left: 70%;">Contact</a>
+                <a href="#" class="btn position-absolute" style="top: 60%; left: 20%;">Reviews</a>
+            </div>
+        </div>
+    </div>
+</section>

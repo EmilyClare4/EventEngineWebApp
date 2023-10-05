@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fxjCyHt8miiqLVUW7HyTjtxziEAJTFOBHC1A4ggbc08=",
+  "Hash": "qKco16qT41FnUZ6P+kLUJGU5cNy4Mwq417M03YfwzhU=",
   "Source": "EventEngine",
   "BasePath": "_content/EventEngine",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\party.jpg",
+      "SourceId": "EventEngine",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\",
+      "BasePath": "_content/EventEngine",
+      "RelativePath": "images/party.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\party.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\table.jpg",
+      "SourceId": "EventEngine",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\",
+      "BasePath": "_content/EventEngine",
+      "RelativePath": "images/table.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\table.jpg"
     },
     {
       "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\js\\site.js",

@@ -251,3 +251,4 @@ C:\Users\emily\Desktop\Computer Science\ThirdYear-2023\158258 Web Dev\EventEngin
 C:\Users\emily\Desktop\Computer Science\ThirdYear-2023\158258 Web Dev\EventEngine\EventEngine\bin\Debug\net7.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\emily\Desktop\Computer Science\ThirdYear-2023\158258 Web Dev\EventEngine\EventEngine\bin\Debug\net7.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\emily\Desktop\Computer Science\ThirdYear-2023\158258 Web Dev\EventEngine\EventEngine\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\emily\Desktop\Computer Science\ThirdYear-2023\158258 Web Dev\EventEngine\EventEngine\obj\Debug\net7.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css
