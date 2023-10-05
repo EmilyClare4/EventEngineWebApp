@@ -21,12 +21,24 @@
       "PackagePath": "staticwebassets\\images\\brushes.jpg"
     },
     {
+      "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\cafe.jpg",
+      "PackagePath": "staticwebassets\\images\\cafe.jpg"
+    },
+    {
       "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\drink.png",
       "PackagePath": "staticwebassets\\images\\drink.png"
     },
     {
+      "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\hike.jpg",
+      "PackagePath": "staticwebassets\\images\\hike.jpg"
+    },
+    {
       "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\mag.png",
       "PackagePath": "staticwebassets\\images\\mag.png"
+    },
+    {
+      "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\paint.jpg",
+      "PackagePath": "staticwebassets\\images\\paint.jpg"
     },
     {
       "Id": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\party.jpg",

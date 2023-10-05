@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yOp1PNaxUwFKcwwXR6HL6c6Z/ZMeK2Pmeo7jZdRBezU=",
+  "Hash": "SkGO9xtnw/XoMvtXYe3lqmIK6PYZNZAZ1ucwoQTdWi0=",
   "Source": "EventEngine",
   "BasePath": "_content/EventEngine",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\images\\brushes.jpg"
     },
     {
+      "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\cafe.jpg",
+      "SourceId": "EventEngine",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\",
+      "BasePath": "_content/EventEngine",
+      "RelativePath": "images/cafe.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cafe.jpg"
+    },
+    {
       "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\drink.png",
       "SourceId": "EventEngine",
       "SourceType": "Discovered",
@@ -136,6 +153,23 @@
       "OriginalItemSpec": "wwwroot\\images\\drink.png"
     },
     {
+      "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\hike.jpg",
+      "SourceId": "EventEngine",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\",
+      "BasePath": "_content/EventEngine",
+      "RelativePath": "images/hike.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hike.jpg"
+    },
+    {
       "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\mag.png",
       "SourceId": "EventEngine",
       "SourceType": "Discovered",
@@ -151,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\mag.png"
+    },
+    {
+      "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\paint.jpg",
+      "SourceId": "EventEngine",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\",
+      "BasePath": "_content/EventEngine",
+      "RelativePath": "images/paint.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\paint.jpg"
     },
     {
       "Identity": "C:\\Users\\emily\\Desktop\\Computer Science\\ThirdYear-2023\\158258 Web Dev\\EventEngine\\EventEngine\\wwwroot\\images\\party.jpg",

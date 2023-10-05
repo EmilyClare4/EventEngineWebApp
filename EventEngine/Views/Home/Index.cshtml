@@ -1,8 +1,9 @@
 ﻿<section class="Intro container">
     <div class="row">
         <div class="col-md-6">
+            <h1>Welcome!</h1>
             <p class="lead">
-                Welcome! <br><br> This is the place to find inspiration for your next gathering,
+                This is the place to find inspiration for your next gathering,
                 be it big or small, outdoor or indoor, formal or casual!<br><br>
                 Get ideas from our popular event templates, or find your dream event by using the filters.
             </p>
@@ -13,29 +14,51 @@
     </div>
 </section>
 
-<section class="Topics container-fluid">
-    <div class="row">
-        <div class="col-md-6 p-0 position-relative">
-            <div class="image-container">
-                <img src="~/images/travel.jpg" alt="travel" class="w-100 " />
-                <a asp-area="" asp-controller="Events" asp-action="Index" class="btn my-button position-absolute" style="top: 55%; left: 35%;">Search</a>
+<section class="Popular events container-fluid">
+    <div class="row justify-content-between">
+        <h1 class="title">Popular Events</h1>
+        <!-- Add justify-content-between class to spread out the cards -->
+        <div class="col-md-4 mb-3">
+            <!-- Adjust column width and add margin bottom for gap -->
+            <div class="card" style="width: 100%;">
+                <img src="~/images/cafe.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cosy Cafe</h5>
+                    <p class="card-text">Small gathering in a new cafe. Grab a cup of coffee and chat.</p>
+                    <a asp-controller="Events" asp-action="Details" asp-route-id="1" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <!-- Adjust column width and add margin bottom for gap -->
+            <div class="card" style="width: 100%;">
+                <img src="~/images/paint.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Paint 'n' Sip</h5>
+                    <p class="card-text">For a bigger group. Book out the place and have a blast!</p>
+                    <a asp-controller="Events" asp-action="Details" asp-route-id="5" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <!-- Adjust column width and add margin bottom for gap -->
+            <div class="card" style="width: 100%;">
+                <img src="~/images/hike.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hiking</h5>
+                    <p class="card-text">Get back to nature with a hike, can be as big or as small as you want.</p>
+                    <a asp-controller="Events" asp-action="Details" asp-route-id="3" class="btn btn-primary">Details</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row justify-content-end ">
-        <div class="col-md-6 p-0 position-relative ">
-            <div class="image-container">
-                <img src="~/images/drink.png" alt="drink" class="w-100" />
-                <a asp-area="" asp-controller="Home" asp-action="About" class="btn my-button position-absolute" style="top: 35%; left: 57%; transform: rotate(0.08turn);">About</a>
-            </div>
-        </div>
-    </div>
+</section>
+
+<section class="Search container-fluid d-flex justify-content-center ">
     <div class="row">
-        <div class="col-md-6 p-0 position-relative">
-            <div class="image-container">
-                <img src="~/images/brush.png" alt="brushes" class="w-100" />
-                <a asp-area="" asp-controller="Home" asp-action="Contact" class="btn my-button position-absolute" style="top: 27%; left: 20%;">Contact</a>
-            </div>
-        </div>
+        <h1 class="title">Search ideas</h1>
+        <p class="text-center">None of the above ideas suit you? Find more inspiration here!</p>
+        <a asp-controller="Events" asp-action="Index" class="btn btn-lg btn-primary">Find</a>
+        
     </div>
 </section>
