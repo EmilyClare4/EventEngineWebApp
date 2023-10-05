@@ -18,11 +18,10 @@
         <div class="col-md-12 p-0 position-relative">
             <div class="image-container">
                 <img src="~/images/table.jpg" alt="Table" class="w-100 opacity-75" />
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                 <a asp-area="" asp-controller="Events" asp-action="Index" class="btn position-absolute" style="top: 27%; left: 70%;">Search</a>
-                <a href="#" class="btn position-absolute" style="top: 27%; left: 20%;">About</a>
-                <a href="#" class="btn position-absolute" style="top: 60%; left: 70%;">Contact</a>
-                <a href="#" class="btn position-absolute" style="top: 60%; left: 20%;">Reviews</a>
+                <a asp-area="" asp-controller="Home" asp-action="About" class="btn position-absolute" style="top: 27%; left: 20%;">About</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact" class="btn position-absolute" style="top: 60%; left: 70%;">Contact</a>
+                <a asp-area="" asp-controller="Home" asp-action="Reviews" class="btn position-absolute" style="top: 60%; left: 20%;">Reviews</a>
             </div>
         </div>
     </div>

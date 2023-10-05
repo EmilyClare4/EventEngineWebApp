@@ -22,13 +22,10 @@
                 @Html.DisplayNameFor(model => model.Location)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cost)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.IsIndoor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsOutdoor)
+                @Html.DisplayNameFor(model => model.Cost)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Capacity)
@@ -49,13 +46,10 @@
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cost)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.IsIndoor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsOutdoor)
+                @Html.DisplayFor(modelItem => item.Cost)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Capacity)
@@ -72,6 +66,8 @@
     <form asp-controller="Events" asp-action="Index">
         <p>
             Title: <input type="text" name="Search" />
+            Indoor Events: 
+            <input type="checkbox" name="IsIndoor" value="true"/>
             <input type="submit" value="Filter" />
         </p>
     </form>

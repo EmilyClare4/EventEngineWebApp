@@ -20,7 +20,7 @@ namespace EventEngine.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index(string search)
+        public async Task<IActionResult> Index(string search, bool IsIndoor)
         {
             if (_context.Event == null)
             {
@@ -31,10 +31,10 @@ namespace EventEngine.Controllers
             var @events = from e in _context.Event
                          select e;
 
-            if (!String.IsNullOrEmpty(search))
-            {
-                @events = @events.Where(s => s.Title!.Contains(search));
-            }
+            @events = @events.Where(e =>
+             (String.IsNullOrEmpty(search) || e.Title.Contains(search)) &&
+             (!IsIndoor || e.IsIndoor)
+            );
 
             return View(await @events.ToListAsync());
         }
