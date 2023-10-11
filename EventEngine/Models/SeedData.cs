@@ -10,41 +10,57 @@ namespace EventEngine.Models
         public static void Initialize(IServiceProvider serviceProvider)
         {
             using (var context = new EventEngineContext(
-                serviceProvider.GetRequiredService<
-                    DbContextOptions<EventEngineContext>>()))
+                serviceProvider.GetRequiredService<DbContextOptions<EventEngineContext>>()))
             {
+                // Seed categories first
+                SeedCategories(context);
 
-                // Look for any categories.
-                if (context.Category.Any())
-                {
-                    return;   // DB has been seeded
-                }
-                context.Category.AddRange(
-                    new Category { Name = "Sport" },
-                    new Category { Name = "Creative" },
-                    new Category { Name = "Food and Drink" },
-                    new Category { Name = "Dance" }
-                );
+                // Seed events after categories
+                SeedEvents(context);
+            }
+        }
 
-                // Retrieve the category based on its name
-                var sportCategory = context.Category.FirstOrDefault(c => c.Name == "Sport");
-                var creativeCategory = context.Category.FirstOrDefault(c => c.Name == "Creative");
-                var foodCategory = context.Category.FirstOrDefault(c => c.Name == "Food and Drink");
-                var danceCategory = context.Category.FirstOrDefault(c => c.Name == "Dance");
+        private static void SeedCategories(EventEngineContext context)
+        {
+            if (context.Category.Any())
+            {
+                return; // Categories have already been seeded
+            }
 
-                context.Event.AddRange(
+            context.Category.AddRange(
+                new Category { Name = "Sport" },
+                new Category { Name = "Creative" },
+                new Category { Name = "Food and Drink" },
+                new Category { Name = "Dance" }
+            );
+
+            context.SaveChanges();
+        }
+        private static void SeedEvents(EventEngineContext context)
+        {
+            if (context.Event.Any())
+            {
+                return; // Events have already been seeded
+            }
+
+            var sportCategory = context.Category.FirstOrDefault(c => c.Name == "Sport");
+            var creativeCategory = context.Category.FirstOrDefault(c => c.Name == "Creative");
+            var foodCategory = context.Category.FirstOrDefault(c => c.Name == "Food and Drink");
+            var danceCategory = context.Category.FirstOrDefault(c => c.Name == "Dance");
+
+            context.Event.AddRange(
+                 new Event
+                 {
+                     Title = "Cosy Cafe",
+                     Description = "A nice relaxing coffee",
+                     Location = "La Cabra, Aarhus City Centre",
+                     Cost = 7.99M,
+                     IsIndoor = true,
+                     Capacity = 8,
+                     Category = foodCategory
+                 },
+
                     new Event
-                    {
-                        Title = "Cosy Cafe",
-                        Description = "A nice relaxing coffee",
-                        Location = "La Cabra, Aarhus City Centre",
-                        Cost = 7.99M,
-                        IsIndoor = true,
-                        Capacity = 8,
-                        CategoryID = foodCategory.Id
-                    },
-                    
-                    new Event 
                     {
                         Title = "Ice Skating",
                         Description = "Let's get frozen together!",
@@ -52,7 +68,7 @@ namespace EventEngine.Models
                         Cost = 0.00M,
                         IsIndoor = true,
                         Capacity = 20,
-                        CategoryID = sportCategory.Id
+                        Category = sportCategory
                     },
 
                     new Event
@@ -63,7 +79,7 @@ namespace EventEngine.Models
                         Cost = 0.00M,
                         IsIndoor = false,
                         Capacity = 12,
-                        CategoryID = sportCategory.Id
+                        Category = sportCategory
                     },
 
                     new Event
@@ -74,7 +90,7 @@ namespace EventEngine.Models
                         Cost = 40.00M,
                         IsIndoor = true,
                         Capacity = 25,
-                        CategoryID = creativeCategory.Id
+                        Category = creativeCategory
                     },
 
                     new Event
@@ -85,7 +101,7 @@ namespace EventEngine.Models
                         Cost = 15.00M,
                         IsIndoor = true,
                         Capacity = 10,
-                        CategoryID = sportCategory.Id
+                        Category = sportCategory
                     },
 
                     new Event
@@ -96,7 +112,7 @@ namespace EventEngine.Models
                         Cost = 60.00M,
                         IsIndoor = true,
                         Capacity = 30,
-                        CategoryID = creativeCategory.Id
+                        Category = creativeCategory
                     },
 
                     new Event
@@ -107,7 +123,7 @@ namespace EventEngine.Models
                         Cost = 10.00M,
                         IsIndoor = true,
                         Capacity = 16,
-                        CategoryID = foodCategory.Id
+                        Category = foodCategory
                     },
 
                     new Event
@@ -118,7 +134,7 @@ namespace EventEngine.Models
                         Cost = 25.00M,
                         IsIndoor = true,
                         Capacity = 12,
-                        CategoryID = danceCategory.Id
+                        Category = danceCategory
                     },
 
                     new Event
@@ -129,7 +145,7 @@ namespace EventEngine.Models
                         Cost = 0.00M,
                         IsIndoor = false,
                         Capacity = 20,
-                        CategoryID = sportCategory.Id
+                        Category = sportCategory
                     },
 
                     new Event
@@ -140,7 +156,7 @@ namespace EventEngine.Models
                         Cost = 15.00M,
                         IsIndoor = true,
                         Capacity = 15,
-                        CategoryID = danceCategory.Id
+                        Category = danceCategory
                     },
 
                     new Event
@@ -151,12 +167,11 @@ namespace EventEngine.Models
                         Cost = 5.00M,
                         IsIndoor = true,
                         Capacity = 30,
-                        CategoryID = creativeCategory.Id
+                        Category = creativeCategory
                     }
-                );
+            );
 
-                context.SaveChanges();
-            }
+            context.SaveChanges();
         }
     }
 }
