@@ -14,6 +14,8 @@ namespace EventEngine.Data
         {
         }
 
-        public DbSet<EventEngine.Models.Event> Event { get; set; } = default!;
+        public DbSet<EventEngine.Models.Event> Event { get; set; }
+
+        public DbSet<EventEngine.Models.Category> Category { get; set; }
     }
 }
