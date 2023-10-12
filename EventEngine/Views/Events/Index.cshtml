@@ -4,6 +4,8 @@
     ViewData["Title"] = "Index";
 }
 
+
+
 <h1>Index</h1>
 
 <table class="table">
@@ -31,7 +33,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
@@ -61,13 +63,10 @@
     <form asp-controller="Events" asp-action="Index">
         <p>
             Title: <input type="text" name="Search" />
-            Indoor Events: 
-            <input type="checkbox" name="IsIndoor" value="true"/>
-            <input type="submit" value="Filter" />
+            Indoor Events:
+            <input type="checkbox" name="IsIndoor" value="true" />
+            <input type="submit" value="Search" />
         </p>
-    </form>
-
-    <form asp-controller="Events" asp-action="Index">
         <p>
             <!-- Dropdown list for categories -->
             <label for="CategoryFilter">Category:</label>
@@ -78,7 +77,19 @@
                     <option value="@category.Id">@category.Name</option>
                 }
             </select>
+
+            <label for="SortCriteria">Sort by:</label>
+            <select id="SortCriteria" name="sortCriteria">
+                <option value="Title">Event Title</option>
+                <option value="CostLowToHigh">Cost: Low to High</option>
+                <option value="CostHighToLow">Cost: High to Low</option>
+                <option value="CapacityLowToHigh">Capacity: Low to High</option>
+                <option value="CapacityHighToLow">Capacity: High to Low</option>
+            </select>
             <input type="submit" value="Filter" />
+            <button type="button" onclick="clearFilters()">Clear Filters</button>
         </p>
     </form>
+
+    <script src="~/js/clearFilters.js"></script>
 </table>

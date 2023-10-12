@@ -20,7 +20,7 @@ namespace EventEngine.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index(string search, bool IsIndoor, int? categoryFilter)
+        public async Task<IActionResult> Index(string search, bool IsIndoor, int? categoryFilter, string sortCriteria)
         {
             if (_context.Event == null)
             {
@@ -42,6 +42,25 @@ namespace EventEngine.Controllers
              (!categoryFilter.HasValue || e.CategoryID == categoryFilter) // Filter by selected category
             );
 
+            switch (sortCriteria)
+            {
+                case "CostLowToHigh":
+                    @events = @events.OrderBy(e => e.Cost);
+                    break;
+                case "CostHighToLow":
+                    @events = @events.OrderByDescending(e => e.Cost);
+                    break;
+                case "CapacityLowToHigh":
+                    @events = @events.OrderBy(e => e.Capacity);
+                    break;
+                case "CapacityHighToLow":
+                    @events = @events.OrderByDescending(e => e.Capacity);
+                    break;
+                default:
+                    // Default sorting criteria (e.g., by event title)
+                    @events = @events.OrderBy(e => e.Title);
+                    break;
+            }
             return View(await @events.ToListAsync());
         }
 
