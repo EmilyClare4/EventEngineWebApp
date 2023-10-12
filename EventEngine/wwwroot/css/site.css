@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -58,4 +58,28 @@ body {
     font-size: 50px; /* Larger font size on hover */
     transform: scale(1.1); /* Scale up the button on hover */
 }
+
+#filter-toggle {
+    background-color: #BCA37F;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Style for the filter options container */
+.filter-section {
+    display: none;
+}
+
+/* Style for the filter section when it's open */
+.filter-section.active {
+    display: block;
+    font-size: 10px;
+    background-color: #BCA37F;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 

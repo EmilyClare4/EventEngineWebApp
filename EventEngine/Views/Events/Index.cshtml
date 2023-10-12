@@ -6,7 +6,40 @@
 
 
 
-<h1>Index</h1>
+<h1>Events</h1>
+
+<button id="filter-toggle">Filter &#x25BC;</button>
+<div class="filter-section">
+    <form asp-controller="Events" asp-action="Index">
+        <p>
+        <p>Title: <input type="text" name="Search" /> <input type="submit" value="Search" /></p>
+        Indoor Events:
+        <input type="checkbox" name="IsIndoor" value="true" />
+
+        <!-- Dropdown list for categories -->
+        <label for="CategoryFilter">Category:</label>
+        <select id="CategoryFilter" name="categoryFilter">
+            <option value="">All Categories</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                <option value="@category.Id">@category.Name</option>
+                }
+        </select>
+        <!-- Dropdown list for sorting -->
+        <label for="SortCriteria">Sort by:</label>
+        <select id="SortCriteria" name="sortCriteria">
+            <option value="Title">Event Title</option>
+            <option value="CostLowToHigh">Cost: Low to High</option>
+            <option value="CostHighToLow">Cost: High to Low</option>
+            <option value="CapacityLowToHigh">Capacity: Low to High</option>
+            <option value="CapacityHighToLow">Capacity: High to Low</option>
+        </select>
+        <input type="submit" value="Filter" />
+
+        <button type="button" onclick="clearFilters()">Reset</button>
+        </p>
+    </form>
+</div>
 
 <table class="table">
     <thead>
@@ -19,9 +52,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsIndoor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cost)
@@ -45,51 +75,18 @@
                 @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsIndoor)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Cost)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Capacity)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
             </td>
         </tr>
 }
     </tbody>
-
-    <form asp-controller="Events" asp-action="Index">
-        <p>
-            Title: <input type="text" name="Search" />
-            Indoor Events:
-            <input type="checkbox" name="IsIndoor" value="true" />
-            <input type="submit" value="Search" />
-        </p>
-        <p>
-            <!-- Dropdown list for categories -->
-            <label for="CategoryFilter">Category:</label>
-            <select id="CategoryFilter" name="categoryFilter">
-                <option value="">All Categories</option> <!-- Add an option to select all categories -->
-                @foreach (var category in ViewBag.Categories)
-                {
-                    <option value="@category.Id">@category.Name</option>
-                }
-            </select>
-
-            <label for="SortCriteria">Sort by:</label>
-            <select id="SortCriteria" name="sortCriteria">
-                <option value="Title">Event Title</option>
-                <option value="CostLowToHigh">Cost: Low to High</option>
-                <option value="CostHighToLow">Cost: High to Low</option>
-                <option value="CapacityLowToHigh">Capacity: Low to High</option>
-                <option value="CapacityHighToLow">Capacity: High to Low</option>
-            </select>
-            <input type="submit" value="Filter" />
-            <button type="button" onclick="clearFilters()">Clear Filters</button>
-        </p>
-    </form>
-
-    <script src="~/js/clearFilters.js"></script>
 </table>
+
+<script src="~/js/filter.js"></script>
+
