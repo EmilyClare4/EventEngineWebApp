@@ -86,7 +86,7 @@ namespace EventEngine.Models
                     {
                         Title = "Paint 'n' Sip",
                         Description = "Get creative while enjoying a glass of wine",
-                        Location = "Get creative while enjoying a glass of wine",
+                        Location = "Vin Danmark",
                         Cost = 40.00M,
                         IsIndoor = true,
                         Capacity = 25,

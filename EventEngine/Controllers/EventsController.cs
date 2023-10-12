@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EventEngine.Data;
 using EventEngine.Models;
@@ -39,7 +34,7 @@ namespace EventEngine.Controllers
             @events = @events.Where(e =>
              (String.IsNullOrEmpty(search) || e.Title.Contains(search)) &&
              (!IsIndoor || e.IsIndoor) &&
-             (!categoryFilter.HasValue || e.CategoryID == categoryFilter) // Filter by selected category
+             (!categoryFilter.HasValue || e.CategoryID == categoryFilter)
             );
 
             switch (sortCriteria)
@@ -57,7 +52,6 @@ namespace EventEngine.Controllers
                     @events = @events.OrderByDescending(e => e.Capacity);
                     break;
                 default:
-                    // Default sorting criteria (e.g., by event title)
                     @events = @events.OrderBy(e => e.Title);
                     break;
             }
@@ -65,136 +59,21 @@ namespace EventEngine.Controllers
         }
 
         // GET: Events/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(string? eventName)
         {
-            if (id == null || _context.Event == null)
+            if (eventName == null || _context.Event == null)
             {
                 return NotFound();
             }
 
             var @event = await _context.Event
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Title == eventName);
             if (@event == null)
             {
                 return NotFound();
             }
 
             return View(@event);
-        }
-
-        // GET: Events/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Events/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Location,Cost,IsIndoor,IsOutdoor,Capacity")] Event @event)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(@event);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(@event);
-        }
-
-        // GET: Events/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Event == null)
-            {
-                return NotFound();
-            }
-
-            var @event = await _context.Event.FindAsync(id);
-            if (@event == null)
-            {
-                return NotFound();
-            }
-            return View(@event);
-        }
-
-        // POST: Events/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Location,Cost,IsIndoor,IsOutdoor,Capacity")] Event @event)
-        {
-            if (id != @event.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(@event);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EventExists(@event.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(@event);
-        }
-
-        // GET: Events/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Event == null)
-            {
-                return NotFound();
-            }
-
-            var @event = await _context.Event
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (@event == null)
-            {
-                return NotFound();
-            }
-
-            return View(@event);
-        }
-
-        // POST: Events/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Event == null)
-            {
-                return Problem("Entity set 'EventEngineContext.Event'  is null.");
-            }
-            var @event = await _context.Event.FindAsync(id);
-            if (@event != null)
-            {
-                _context.Event.Remove(@event);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool EventExists(int id)
-        {
-          return (_context.Event?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
