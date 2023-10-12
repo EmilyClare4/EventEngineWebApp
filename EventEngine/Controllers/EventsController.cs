@@ -20,12 +20,17 @@ namespace EventEngine.Controllers
         }
 
         // GET: Events
-        public async Task<IActionResult> Index(string search, bool IsIndoor)
+        public async Task<IActionResult> Index(string search, bool IsIndoor, int? categoryFilter)
         {
             if (_context.Event == null)
             {
                 return Problem("Entity set 'EventEngineContext.Event'  is null.");
             }
+
+            List<Category> categories = _context.Category.ToList();
+
+            // Pass the list of categories to the view
+            ViewBag.Categories = categories;
 
             // LINQ query to select events
             var @events = from e in _context.Event
@@ -33,7 +38,8 @@ namespace EventEngine.Controllers
 
             @events = @events.Where(e =>
              (String.IsNullOrEmpty(search) || e.Title.Contains(search)) &&
-             (!IsIndoor || e.IsIndoor)
+             (!IsIndoor || e.IsIndoor) &&
+             (!categoryFilter.HasValue || e.CategoryID == categoryFilter) // Filter by selected category
             );
 
             return View(await @events.ToListAsync());
