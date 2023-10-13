@@ -59,15 +59,15 @@ namespace EventEngine.Controllers
         }
 
         // GET: Events/Details/5
-        public async Task<IActionResult> Details(string? eventName)
+        public async Task<IActionResult> Details(int? id)
         {
-            if (eventName == null || _context.Event == null)
+            if (id == null || _context.Event == null)
             {
                 return NotFound();
             }
 
             var @event = await _context.Event
-                .FirstOrDefaultAsync(m => m.Title == eventName);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (@event == null)
             {
                 return NotFound();

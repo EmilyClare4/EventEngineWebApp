@@ -1,4 +1,6 @@
-﻿<section class="Intro container py-5">
+﻿@model EventEngine.ViewModels.HomeIndexViewModel
+
+<section class="Intro container py-5">
     <div class="row">
         <div class="col-md-6">
             <h1>Welcome!</h1>
@@ -13,37 +15,23 @@
 
 <section class="Popular events container-fluid py-5">
     <div class="row justify-content-between">
-        <h1 class="title">Popular Events</h1>
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="~/images/cafe.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cosy Cafe</h5>
-                    <p class="card-text">Small gathering in a new cafe. Grab a cup of coffee and chat.</p>
-                    <a asp-controller="Events" asp-action="Details" asp-route-eventName="Cosy Cafe" class="btn my-button">Details</a>
+        <h1 class="title text-center">Popular Events</h1>
+       
+        @for (var i = 0; i < Model.Events.Length; i++)
+        {
+            var eventItem = Model.Events[i];
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/@Model.ImageFileNames[i]" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@eventItem.Title</h5>
+                        <p class="card-text">@eventItem.Description</p>
+                        <a asp-controller="Events" asp-action="Details" asp-route-id="@eventItem.Id" class="btn my-button">Details</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="~/images/paint.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Paint 'n' Sip</h5>
-                    <p class="card-text">For a bigger group. Book out the place and have a blast!</p>
-                    <a asp-controller="Events" asp-action="Details" asp-route-eventName="Paint 'n' Sip" class="btn my-button">Details</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="~/images/hike.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Hike</h5>
-                    <p class="card-text">Get back to nature with a hike, can be as big or as small as you want.</p>
-                    <a asp-controller="Events" asp-action="Details" asp-route-eventName="Hike" class="btn my-button">Details</a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </section>
 

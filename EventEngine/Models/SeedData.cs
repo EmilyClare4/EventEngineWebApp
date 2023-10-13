@@ -52,7 +52,7 @@ namespace EventEngine.Models
                  new Event
                  {
                      Title = "Cosy Cafe",
-                     Description = "A nice relaxing coffee",
+                     Description = "Enjoy a nice relaxing coffee and catch up",
                      Location = "La Cabra, Aarhus City Centre",
                      Cost = 7.99M,
                      IsIndoor = true,
