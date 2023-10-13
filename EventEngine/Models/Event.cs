@@ -6,6 +6,7 @@ namespace EventEngine.Models
 {
     public class Event
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         public string Title { get; set; }
@@ -15,5 +16,9 @@ namespace EventEngine.Models
         public decimal Cost { get; set; }
         public bool IsIndoor { get; set; }
         public int Capacity { get; set; }
+
+        public int CategoryID { get; set; }
+
+        public Category Category { get; set; }
     }
 }

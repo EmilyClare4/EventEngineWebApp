@@ -1,28 +1,46 @@
-﻿<section class="Intro container">
+﻿@model EventEngine.ViewModels.HomeIndexViewModel
+
+<section class="Intro container py-5">
     <div class="row">
         <div class="col-md-6">
+            <h1>Welcome!</h1>
             <p class="lead">
-                Welcome! <br><br> This is the place to find inspiration for your next gathering,
-                be it big or small, outdoor or indoor, formal or casual!<br><br>
-                Get ideas from our popular event templates, or find your dream event by using the filters.
+                This is the place to find inspiration for your next gathering,
+                be it big or small, outdoor or indoor, formal or casual!
             </p>
         </div>
-        <div class="col-md-6">
-
-        </div>
+        <div class="col-md-6"></div>
     </div>
 </section>
 
-<section class="Topics container-fluid text-center">
-    <div class="row">
-        <div class="col-md-12 p-0 position-relative">
-            <div class="image-container">
-                <img src="~/images/table.jpg" alt="Table" class="w-100" />
-                <a asp-area="" asp-controller="Events" asp-action="Index" class="btn my-button position-absolute" style="top: 27%; left: 70%;">Search</a>
-                <a asp-area="" asp-controller="Home" asp-action="About" class="btn my-button position-absolute" style="top: 27%; left: 20%;">About</a>
-                <a asp-area="" asp-controller="Home" asp-action="Contact" class="btn my-button position-absolute" style="top: 60%; left: 70%;">Contact</a>
-                <a asp-area="" asp-controller="Home" asp-action="Reviews" class="btn my-button position-absolute" style="top: 60%; left: 20%;">Reviews</a>
+<section class="Popular events container-fluid py-5">
+    <div class="row justify-content-between">
+        <h1 class="title text-center">Popular Events</h1>
+       
+        @for (var i = 0; i < Model.Events.Length; i++)
+        {
+            var eventItem = Model.Events[i];
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/@Model.ImageFileNames[i]" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@eventItem.Title</h5>
+                        <p class="card-text">@eventItem.Description</p>
+                        <a asp-controller="Events" asp-action="Details" asp-route-id="@eventItem.Id" class="btn my-button">Details</a>
+                    </div>
+                </div>
             </div>
+        }
+    </div>
+</section>
+
+<section class="Search container-fluid py-5 d-flex justify-content-center">
+    <div class="row">
+        <h1 class="title text-center">Search ideas</h1>
+        <p class="text-center">None of the above ideas suit you? Find more inspiration here!</p>
+        <div class="text-center">
+            <a asp-controller="Events" asp-action="Index" class="btn big-button">Find</a>
         </div>
     </div>
 </section>

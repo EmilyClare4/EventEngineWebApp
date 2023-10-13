@@ -19,4 +19,8 @@
     <None Include="wwwroot\images\party.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

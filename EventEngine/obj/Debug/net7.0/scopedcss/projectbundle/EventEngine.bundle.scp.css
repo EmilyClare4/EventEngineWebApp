@@ -1,18 +1,6 @@
 /* _content/EventEngine/Views/Home/Index.cshtml.rz.scp.css */
-.my-button[b-lmchc4k1in] {
-    background-color: #007bff; /* Default button color */
-    color: #fff; /* Default text color */
-    font-size: 16px; /* Default font size */
-    padding: 10px 20px; /* Default padding */
-    transition: background-color 0.3s, transform 0.3s, font-size 0.3s; /* Transition properties for hover effect */
-}
-
-/* Button styles for hover state */
-.my-button:hover[b-lmchc4k1in] {
-    background-color: #0056b3; /* New button color on hover */
-    color: #fff; /* New text color on hover */
-    font-size: 18px; /* Larger font size on hover */
-    transform: scale(1.1); /* Scale up the button on hover */
+.title[b-lmchc4k1in] {
+    text-align: center;
 }
 /* _content/EventEngine/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
