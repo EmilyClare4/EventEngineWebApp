@@ -8,4 +8,9 @@ of a new, exciting event to plan so I wanted to create an "Event Engine" where e
 - Emily Ferguson
 
 ## Notes on use
-- User can search and filter events 
+- User can search and filter events
+
+## Further development plans:
+- Allow user to add, update, delete events
+- Deploy on GitHub using Azure Web App (currently experiencing log in issues with Microsoft Azure, hence this not being completed)
+- Design
